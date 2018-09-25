@@ -1,0 +1,41 @@
+<link rel="import" href="../../bower_components/polymer/polymer-element.html">
+<link rel="import" href="../../bower_components/paper-item/paper-item.js">
+
+<dom-module id="app-lista">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+    <h2>app-lista works!</h2>
+
+    <div role="listbox">
+      <paper-item>Inbox</paper-item>
+      <paper-item>Starred</paper-item>
+      <paper-item>Sent mail</paper-item>
+    </div>
+
+
+  </template>
+
+  <script>
+    /**
+     * @customElement
+     * @polymer
+     */
+    class AppLista extends Polymer.Element {
+      static get is() { return 'app-lista'; }
+      static get properties() {
+        return {
+          prop1: {
+            type: String,
+            value: 'app-lista'
+          }
+        };
+      }
+    }
+
+    window.customElements.define(AppLista.is, AppLista);
+  </script>
+</dom-module>
