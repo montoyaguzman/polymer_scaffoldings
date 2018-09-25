@@ -1,5 +1,5 @@
 <link rel="import" href="../../bower_components/polymer/polymer-element.html">
-<link rel="import" href="../../bower_components/paper-item/paper-item.js">
+<link rel="import" href="../../bower_components/iron-collapse-button/iron-collapse-button.html">
 <link rel="import" href="../../bower_components/iron-icons/iron-icons.html">
 
 <dom-module id="app-lista">
@@ -18,6 +18,16 @@
       <paper-item>Starred</paper-item>
       <paper-item>Sent mail</paper-item>
     </div>
+
+    <iron-collapse-button>
+      <div slot="collapse-trigger">Trigger</div>
+      <div slot="collapse-content">
+        <ul>
+          <li>Do this</li>
+          <li>or that</li>
+        </ul>
+      </div>
+    </iron-collapse-button>
 
 
   </template>
