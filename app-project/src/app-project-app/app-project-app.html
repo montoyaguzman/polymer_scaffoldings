@@ -1,6 +1,7 @@
 <link rel="import" href="../../bower_components/polymer/polymer-element.html">
 <link rel="import" href="../../bower_components/iron-icons/maps-icons.html">
 <link rel="import" href="../../bower_components/iron-icons/iron-icons.html">
+<link rel="import" href="../../bower_components/iron-collapse-button/iron-collapse-button.html">
 <link rel="import" href="../app-lista/app-lista.html">
 
 <dom-module id="app-project-app">
@@ -11,6 +12,16 @@
       }
     </style>
     <h2>Hello [[prop1]]!</h2>
+
+    <iron-collapse-button>
+      <div slot="collapse-trigger">Trigger</div>
+      <div slot="collapse-content">
+        <ul>
+          <li>Do this</li>
+          <li>or that</li>
+        </ul>
+      </div>
+    </iron-collapse-button>
 
     Iconos
     <iron-icon icon="account-circle"></iron-icon>
