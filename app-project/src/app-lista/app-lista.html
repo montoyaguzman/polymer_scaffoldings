@@ -1,5 +1,6 @@
 <link rel="import" href="../../bower_components/polymer/polymer-element.html">
 <link rel="import" href="../../bower_components/iron-icons/iron-icons.html">
+<link rel="import" href="../../bower_components/paper-input/paper-input.html">
 
 <dom-module id="app-lista">
   <template>
@@ -28,6 +29,13 @@
       </div>
     </iron-collapse-button>
 
+    <slot></slot>
+    <br />
+    <paper-input label="name" value="{{name}}"></paper-input>
+    <br />
+    <span>Me llamo {{name}}</span>
+    <br />
+    <span>Yo tengo [[anios]] de edad!</span>
 
   </template>
 
@@ -43,6 +51,14 @@
           prop1: {
             type: String,
             value: 'app-lista'
+          },
+          anios: {
+            type: Number,
+            value: 12
+          },
+          anios: {
+            type: String,
+            value: ''
           }
         };
       }
