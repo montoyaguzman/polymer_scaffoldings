@@ -1,0 +1,66 @@
+<link rel="import" href="../../bower_components/polymer/polymer-element.html">
+
+<dom-module id="app-hijo-lista">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+
+    <h2>app-hijo-lista works!</h2>
+    llamo {{name}}
+
+  </template>
+
+  <script>
+    /**
+     * @customElement
+     * @polymer
+     */
+    class AppHijoLista extends Polymer.Element {
+      static get is() { return 'app-hijo-lista'; }
+      static get properties() {
+        return {
+          prop1: {
+            type: String,
+            value: 'app-hijo-lista'
+          },
+          name: {
+            type: String,
+            value: "default",
+            notify: true
+          }
+        };
+      }
+      constructor() {
+        super();
+
+        // console.log(this.$.elemento);
+      }
+      connectedCallback() {
+        super.connectedCallback();
+
+        console.log(this.$.elemento);
+      }
+      disconnectedCallback() {
+        super.disconnectedCallback();
+
+      }
+
+      attributeChangedCallback() {
+        super.attributeChangedCallback();
+
+      }
+
+      ready() {
+        super.ready();
+        setTimeout(() => {
+          this.name = "Uno nuevo"
+        }, 3000)
+      }
+    }
+
+    window.customElements.define(AppHijoLista.is, AppHijoLista);
+  </script>
+</dom-module>

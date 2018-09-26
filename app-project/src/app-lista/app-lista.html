@@ -1,6 +1,7 @@
 <link rel="import" href="../../bower_components/polymer/polymer-element.html">
 <link rel="import" href="../../bower_components/iron-icons/iron-icons.html">
 <link rel="import" href="../../bower_components/paper-input/paper-input.html">
+<link rel="import" href="../app-hijo-lista/app-hijo-lista.html">
 
 <dom-module id="app-lista">
   <template>
@@ -33,9 +34,14 @@
     <br />
     <paper-input label="name" value="{{name}}"></paper-input>
     <br />
-    <span>Me llamo {{name}}</span>
+    <span>Me <app-hijo-lista name="{{name}}"></app-hijo-lista></span>
     <br />
     <span>Yo tengo [[anios]] de edad!</span>
+    <br />
+    <h1 id="elemento">Titulo</h1>
+
+    <br />
+
 
   </template>
 
@@ -56,11 +62,35 @@
             type: Number,
             value: 12
           },
-          anios: {
+          name: {
             type: String,
             value: ''
           }
         };
+      }
+      constructor() {
+        super();
+        console.log("Ejecutándose constructor...");
+        // console.log(this.$.elemento);
+      }
+      connectedCallback() {
+        super.connectedCallback();
+        console.log("Ejecutándose connectedCallback...");
+        console.log(this.$.elemento);
+      }
+      disconnectedCallback() {
+        super.disconnectedCallback();
+        console.log('Ejecutándose disconnectedCallback');
+      }
+
+      attributeChangedCallback() {
+        super.attributeChangedCallback();
+        console.log('Ejecutándose attributeChangedCallback');
+      }
+
+      ready() {
+        super.ready();
+        console.log('Ejecutándose ready');
       }
     }
 
