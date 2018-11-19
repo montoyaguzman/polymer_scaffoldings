@@ -32,9 +32,10 @@
 
     <slot></slot>
     <br />
-    <paper-input label="name" value="{{name}}"></paper-input>
+    <!--<paper-input label="name" value="{{name}}"></paper-input>-->
+    <button on-click="changeNombre">cambio</button>
     <br />
-    <span>Me <app-hijo-lista name="{{name}}"></app-hijo-lista></span>
+    <span>Me <app-hijo-lista name="[[name]]"></app-hijo-lista></span>
     <br />
     <span>Yo tengo [[anios]] de edad!</span>
     <br />
@@ -91,6 +92,10 @@
       ready() {
         super.ready();
         console.log('Ejecutándose ready');
+      }
+
+      changeNombre() {
+        this.name = "Montoya";
       }
     }
 

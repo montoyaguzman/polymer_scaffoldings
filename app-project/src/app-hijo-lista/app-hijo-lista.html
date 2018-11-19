@@ -9,7 +9,7 @@
     </style>
 
     <h2>app-hijo-lista works!</h2>
-    llamo {{name}}
+    llamo [[name]]
 
   </template>
 
@@ -28,8 +28,8 @@
           },
           name: {
             type: String,
-            value: "default",
-            notify: true
+            // value: "default",
+            // notify: true
           }
         };
       }
@@ -55,9 +55,9 @@
 
       ready() {
         super.ready();
-        setTimeout(() => {
+        /*setTimeout(() => {
           this.name = "Uno nuevo"
-        }, 3000)
+        }, 3000)¡*/
       }
     }
 
